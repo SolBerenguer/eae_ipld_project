@@ -21,7 +21,7 @@ def home_page():
 
 
     # ----- Top title -----
-    st.html("""<div style="text-align: center;"><h1 style="text-align: center;">👋 Hi! My name is Sol Python</h1></div>""") 
+    st.html("""<div style="text-align: center;"><h1 style="text-align: center;">👋 Hi! My name is Sol </h1></div>""") 
 
 
     # ----- Profile image file -----
