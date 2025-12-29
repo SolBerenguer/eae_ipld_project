@@ -4,7 +4,7 @@ import base64
     
 # ----- Page configs (tab title, favicon) -----
 st.set_page_config(
-    page_title="<Your Name> Portfolio",
+    page_title="Sol Berenguer |Data Portfolio",
     page_icon="📊",
 )
 
@@ -21,7 +21,7 @@ def home_page():
 
 
     # ----- Top title -----
-    st.html("""<div style="text-align: center;"><h1 style="text-align: center;">👋 Hi! My name is Python</h1></div>""")  # TODO: Add your name
+    st.html("""<div style="text-align: center;"><h1 style="text-align: center;">👋 Hi! My name is Sol Python</h1></div>""") 
 
 
     # ----- Profile image file -----
@@ -34,13 +34,13 @@ def home_page():
     # ----- Your Profile Image -----
     st.html(f"""
     <div style="display: flex; justify-content: center;">
-        <img src="{img}" alt="Your Name" width="300" height="300" style="border-radius: 50%; object-fit: cover; margin-top: 40px; margin-bottom: 40px;">
+        <img src="{img}" alt="Sol Berenguer" width="300" height="300" style="border-radius: 50%; object-fit: cover; margin-top: 40px; margin-bottom: 40px;">
     </div>
     """)
 
 
     # ----- Personal title or short description -----
-    current_role = "Current Role and/or Studies or Description"   # TODO: Change this
+    current_role = "Industrial Engineering & Logistics" 
 
     st.html(f"""<div style="text-align: center;"><h4><i>{current_role}</i></h4></div>""")
 
@@ -52,24 +52,22 @@ def home_page():
 
     # TODO: Modify and adapt the following lines to your info, you can add or remove some details if you want
     st.write("""
-    - 🧑‍💻 I am a <Current Role and/or Studies> 
+    - 🧑‍💻 I am a Master in Big Data & Analytics student 
 
-    - 🛩️ prev: <Previous Experience, Background or Studies>
+    - 🛩️ Industrial Engineering & Logistics background.
 
-    - ❤️ <Your Passion and/or Interests>
+    - ❤️ technology, business, fitness and movies.
 
-    - 🤖 <Your Personal Projects>
+    - 🤖 entrepreneurship related to the food industry and healthcare.
 
-    - 🏂 <Your Hobbies>
+    - 🏂 Hobbies: travelling and sports.
 
-    - 📫 How to reach me: <Your Email>
+    - 📫 How to reach me: solberenguersol@gmail.com
 
-    - 🏠 Barcelona
+    - 🏠 Barcelona.
     """)
 
-    # Feel free to add other points like your Linkedin, Github, Social Media, etc.
-
-
+   
 # This is ensambling the entire app with the different pages and the navigation menu
 pg = st.navigation([
     st.Page(home_page, title="Home", icon="👋"),
