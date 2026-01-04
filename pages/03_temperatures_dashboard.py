@@ -136,7 +136,7 @@ if unique_countries_list is not None and len(selected_cities) > 0:
     plt.ylabel("Temperature (°C)")
     plt.legend()
 
-    c.pyplot(fig)
+    st.pyplot(fig)
 
     # Ex 3.7: Histogram
     fig = plt.figure(figsize=(10, 5))
@@ -162,4 +162,4 @@ if unique_countries_list is not None and len(selected_cities) > 0:
     plt.ylabel("Frequency")
     plt.legend()
 
-    c.pyplot(fig)
+    st.pyplot(fig)
