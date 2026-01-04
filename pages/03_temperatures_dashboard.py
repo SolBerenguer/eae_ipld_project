@@ -134,21 +134,21 @@ if unique_countries_list is not None and len(selected_cities) > 0:
     fig = plt.figure(figsize=(10, 5))
 
     for city in selected_cities:
-        city_df = temps_df[temps_df["City"] == city]            # TODO
-       city_df_period = city_df[
+        city_df = temps_df[temps_df["City"] == city]
+        city_df_period = city_df[
         (city_df["Date"] >= start_date) &
         (city_df["Date"] <= end_date)
     ]     
     
     
-         plt.plot(
-             city_df_period["Date"],
+    plt.plot(
+            city_df_period["Date"],
         city_df_period["AvgTemperatureCelsius"],
         label=city,
         marker="o")                 
-     plt.title(f"Temperature Comparison ({start_date} to {end_date})")   # TODO
-     plt.xlabel("Date")  # TODO
-     plt.ylabel("Temperature (°C)")  # TODO
+    plt.title(f"Temperature Comparison ({start_date} to {end_date})")  
+    plt.xlabel("Date")  # TODO
+    plt.ylabel("Temperature (°C)")  # TODO
 
     plt.legend()
     
@@ -161,20 +161,21 @@ if unique_countries_list is not None and len(selected_cities) > 0:
 
     fig = plt.figure(figsize=(10, 5))
 
-     for city in selected_cities:
-         city_df = temps_df[temps_df["City"] == city]            # TODO
+    for city in selected_cities:
+         city_df = temps_df[temps_df["City"] == city] 
+                    
          city_df_period = city_df[
-        (city_df["Date"] >= start_date) &
-        (city_df["Date"] <= end_date)
+                     (city_df["Date"] >= start_date) &
+                                     (city_df["Date"] <= end_date)
     ]     
          plt.hist(city_df_period["AvgTemperatureCelsius"],
         bins=20,
         label=city,
         alpha=0.6)                # TODO
 
-     plt.title(f"Temperature Distribution Comparison ({start_date} to {end_date})")   # TODO
-     plt.xlabel("Temperature (°C)")  # TODO
-     plt.ylabel("Frequency")  # TODO
+    plt.title(f"Temperature Distribution Comparison ({start_date} to {end_date})")   # TODO
+    plt.xlabel("Temperature (°C)")  # TODO
+    plt.ylabel("Frequency")  # TODO
 
     plt.legend()
 
