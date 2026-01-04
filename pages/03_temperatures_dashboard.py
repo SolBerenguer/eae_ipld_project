@@ -1,3 +1,4 @@
+
 # the libraries you have to use
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -23,14 +24,14 @@ st.divider()
 def load_data():
     data_path = "data/cities_temperatures.csv"
 
-    # Ex 3.1: Load the dataset using Pandas using the data_path variable
     temps_df = pd.read_csv(data_path)
 
     if temps_df is not None:
         temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
 
     return temps_df
-@st.cache_data
+
+temps_df = load_data()
 
 # Displaying the dataset in a expandable table
 with st.expander("Check the complete dataset:"):
