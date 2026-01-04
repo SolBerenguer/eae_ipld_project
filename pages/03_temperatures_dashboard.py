@@ -19,20 +19,18 @@ st.divider()
 
 
 # ----- Loading the dataset -----
-
 @st.cache_data
 def load_data():
     data_path = "data/cities_temperatures.csv"
 
+    # Ex 3.1: Load the dataset using Pandas using the data_path variable
     temps_df = pd.read_csv(data_path)
 
     if temps_df is not None:
         temps_df["Date"] = pd.to_datetime(temps_df["Date"]).dt.date
 
     return temps_df
-
-
-temps_df = load_data()
+@st.cache_data
 
 # Displaying the dataset in a expandable table
 with st.expander("Check the complete dataset:"):
